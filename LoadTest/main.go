@@ -20,7 +20,8 @@ func main() {
 	}
 	metrics.Close()
 
-	fmt.Printf("99th percentile: %s\n", metrics.Latencies.P99)
+	fmt.Printf("Latency total: %s\n", metrics.Latencies.Total)
+
 }
 
 func NewCustomTargeter(option string) vegeta.Targeter {
